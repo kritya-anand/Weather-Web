@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>BreezeNow🌧️</title>
+        <link rel="stylesheet" href = "style.css">
+    </head>
+    <body>
+        <section class = "header">
+            <nav>
+                <div class = "logo">BreezeNow🌧️</div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#backtotop">HOME</a></li>
+                        <li><a href="#aboutus">ABOUT</a></li>
+                        <li><a href="#foot">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        <hr class="line" id="backtotop">
+        <div class="searchbox">
+            <input class = "searchbar" type="text" placeholder="Enter City Name ⛅">
+            <button class="fa-solid fa-magnifying-glass" id="searchbtn"></button>
+        </div>
+
+
+        <div class="card" >
+            <div class="weatherbox">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="temptoggle">
+                    <span class="slider"></span>
+                </label>
+            <div class = "name">-------</div>
+            <div class="date"></div>
+            <div class = "image"><img src="images/cloud.png" width="150" class="weather_img"></div>
+            <div class="weather-details">
+                <h1 class="temperature">Temperature: ---</h1>
+                <h1 class="humidity">Humidity: ---</h1>
+                <h1 class="wind">Wind Speed: ---</h1>
+            </div>
+            </div>
+            <div class="location-not-found">
+                <h1>Sorry, Location not found!!!</h1>
+                <img src="images/err.png" alt="404 Error" width="150">
+            </div>
+        </div>
+        <hr class="line2" id="aboutus">
+        <div class="about" >
+            <h1 ><u>ABOUT US</u></h1>
+            <p>
+                Welcome to BreezeNow🌧️, your reliable source for real-time 
+                weather updates and forecasts. Our platform provides accurate and 
+                detailed weather information, including temperature, humidity, wind speed, 
+                and precipitation. Whether you're planning your day or tracking severe weather, 
+                we've got you covered with a sleek, user-friendly interface and up-to-date data.
+                
+                Our mission is to keep you informed and prepared for any weather condition, 
+                with features like location-based forecasts, hourly updates, and long-range 
+                predictions. Explore the beauty of weather with our interactive visuals and 
+                intuitive design. Stay ahead of the weather with BreezeNow🌧️!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="twitter" class="twitter" id="foot" target="_blank"><img src="images/twitter.jpg" width = "20"></a>
+            <a href="instagram" class="insta" target="_blank"><img src="images/insta.jpg" width = "20"></a>
+        <a href="gitub" class="git" target="_blank"><img src="images/git.png" width = "20"></a>
+        <a href="linkedin" class="linkin" target="_blank"><img src="images/R.png" width = "20"></a><br><br><br>
+        <a href="privacy policy" target="_blank" >Privacy Policy</a>
+        <a href="Terms and Conditions" class="tnc" target="_blank">Terms and Conditions</a>
+        <a href="Copyright Information" class="copyright" target="_blank">Copyright Information</a>
+        <a href="#backtotop">Back to Top</a>
+        </div>
+    </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
