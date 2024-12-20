@@ -1,281 +1,105 @@
-*{
+/* body {
     margin: 0;
-    padding: 0;
-}
-main{
-    flex:1;
-}
-
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+} */
 html{
     scroll-behavior: smooth;
-    height: 100%;
 }
-
-body {
-    min-height: 100%; /* Make the body extend for content or viewport height */
-    margin: 0; /* Remove default margins */
-    background-image: url('images/bg1.webp'); /* Replace with your image URL */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-  }
-
-@media (max-width: 768px) {
-    body {
-      background-size: contain; /* Adjust to fit smaller screens */
-    }
-  }
-
-/* Style the logo */
-.logo {
-    font-size: 30px; /* Adjust the size */
-    font-weight: bold; /* Make it bold */
-    color: white; /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for effect */ 
-    margin-left: 18px;
-}
-
-.searchbar{
-    position:absolute;
-    top:300px;
-    left:50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50px;
-    width:1100px;
-    height: 30px;
+.container {
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
 }
 
-.searchbar:hover{
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.9);
-}
-
-nav {
-    position: fixed;  /* Fixes the navbar at the top */
-    top: 0;           /* Positions the navbar at the very top */
-    width: 100%;      /* Makes the navbar span across the full width */
-    background: linear-gradient(to right, #434343, #000000);
-    padding: 10px 0;  /* Padding for spacing */
-    z-index: 1000;    /* Ensures the navbar stays on top of other content */
-    height: 60px;
-}
-
-.nav-links{
-    flex:1;
-    text-align: right;
-}
-
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    position: relative;
-    padding: 8px 12px;
-    color : aqua;
-}
-
-.nav-links ul li a{
-    color:white;
-    text-decoration: none;
-    transition: color 1s;
-    font-weight: bold;
-}
-
-.nav-links ul li a:hover{
-    color:aqua;
-    text-decoration: underline;
-}
-
-.card{
-    width: 400px;
-    background: linear-gradient(135deg, #654ea3, #eaafc8);
-    color: black;
-    margin:100px auto 0;
-    border-radius: 20px;
-    padding: 20px 35px;
-    text-align: center;
-    position: absolute;
-    top:320px;
-    left:30%;
-    height: 180px;
-    box-shadow: 50px 30px 20px rgba(0, 0, 0, 0.9);
-    transition-duration: 1s;
-
-}
-
-.location-not-found{
-    display:none;
-}
-
-.weatherbox{
-    display:flex;
-}
-.name{
-    text-align: left;
-    font-weight: bold;
-    font-size:40px;   
-}
-
-.date{
-    text-align:left;
-    font-weight:bold;
-    position: absolute;
-    top: 65px;
-    left:40px;
-}
-
-.image{
-    position: absolute;
-    left: 65%;
-    top:10%;
-}
-
-.weather-details{
-    text-align: left;
-    text-decoration: none;
-    font-size:15px;
-    position: absolute;
-    bottom: 15%;
-    left:10%;
-    line-height: 30px;
-}
-
-.about{
-    position: absolute;
-    top: 830px;
-    text-align: center;
-    line-height: 35px;
-    font-size: 30px;
-    width:100%;
-}
-
-.about p{
-    margin-top:35px;
-    width: 100%;
-}
-
-footer {
-    margin-top: auto; /* Push the footer to the bottom of the page */
-    background: linear-gradient(to right, #8e44ad, #3498db);
-    text-align: center; /* Center-align footer content */
-    padding: 10px; /* Add some padding */
+#footer {
     bottom: 0;
+    color: black;
+    left: 0;
+    position: relative;
     width: 100%;
-    position:relative;
-    top:1000px;
-    width:100%;
-  }
-  
-
-.git{
-    padding-right:25px;
-    padding-left:25px;
-}
-.twitter{
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
-.footer-links{
-    margin-top: 0;
-    flex: 1;
-    text-align: center;
+#weather-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 450px;
 }
 
-footer a{
-    color:white;
-    text-decoration: none;
+#weather-card:hover {
+    transform: scale(1.05);
 }
 
-.tnc{
-    padding-left: 25px;
-    padding-right: 25px;
+#city-input {
+    padding: 15px;
+    margin: 10px 0;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-footer a:hover{
-    color:cyan;
-    text-decoration: underline;
+#city-input:focus {
+    outline: none;
+    border-color: #2196F3;
 }
 
-.copyright{
-    padding-right: 25px;
+#city-input::placeholder {
+    color: #aaa;
 }
 
-.line {
+#city-input-btn {
+    padding: 10px;
+    background-color: #2196F3;
+    color: #fff;
     border: none;
-    height: 3px;
-    position: absolute;
-    top:61px;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    width: 100%;
-    margin: 20px auto;
-}
-
-.line2{
-    position:absolute;
-    top: 700px;
-}
-
-.searchbox button{
-    position: absolute;
-    top: 285px;
-    right:80px;
-    width: 50px;
-    height:30px;
-    border-radius: 50px;
-}
-
-/* Container for the toggle */
-.toggle-switch {
-    position: absolute;
-    top:5px;
-    left: 310px;
-    display: inline-block;
-    width: 60px;
-    height: 24px;
-}
-
-/* Hide default checkbox */
-.toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The track */
-.slider {
-    position: absolute;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    background-color: peachpuff;
-    border-radius: 24px;
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.3s;
 }
 
-/* The circular slider */
-.slider::before {
-    content: "°C";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
+#city-input-btn:hover {
+    background-color: #1565C0;
 }
 
-/* Toggled state */
-.toggle-switch input:checked+.slider {
-    background-color: rgb(26, 22, 5);
+#weather-info {
+    display: none;
 }
 
-.toggle-switch input:checked+.slider::before {
-    transform: translateX(36px);
-    content: "°F";
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+#description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#wind-speed {
+    font-size: 16px;
+    color: rgb(255, 0, 0);
+}
+
+#date {
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}
+.card-body{
+    background: linear-gradient(135deg, #654ea3, #eaafc8);
+}
+
+body{
+    background-image: url('images/bg1.webp');
 }
