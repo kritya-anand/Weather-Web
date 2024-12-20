@@ -39,3 +39,4 @@ function weatherShowFn(data) {
 			`images/cloud.png`);
 	// $('#weather-info').fadeIn();
 }
+
