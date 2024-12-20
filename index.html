@@ -1,83 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <title>BreezeNow🌧️</title>
-        <link rel="stylesheet" href = "style.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class = "logo">BreezeNow🌧️</div>
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="#backtotop">HOME</a></li>
-                        <li><a href="#aboutus">ABOUT</a></li>
-                        <li><a href="#foot">CONTACT US</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-        <hr class="line" id="backtotop">
-        <div class="searchbox">
-            <input class = "searchbar" type="text" placeholder="Enter City Name ⛅">
-            <button class="fa-solid fa-magnifying-glass" id="searchbtn"></button>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+	<title>GFG App</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header">
+        <a class="navbar-brand" href="#">BreezeNow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#foot">Contact</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
         </div>
+      </nav>
 
 
-        <div class="card" >
-            <div class="weatherbox">
-                <label class="toggle-switch">
-                    <input type="checkbox" id="temptoggle">
-                    <span class="slider"></span>
-                </label>
-            <div class = "name">-------</div>
-            <div class="date"></div>
-            <div class = "image"><img src="images/cloud.png" width="150" class="weather_img"></div>
-            <div class="weather-details">
-                <h1 class="temperature">Temperature: ---</h1>
-                <h1 class="humidity">Humidity: ---</h1>
-                <h1 class="wind">Wind Speed: ---</h1>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-sm-12 d-flex align-items-center justify-content-center">
+            <div class="card text-center" id="weather-card">
+              <div class="card-body">
+                <h5 class="card-title">Welcome to our Weather App!</h5>
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="city-input-btn"
+                onclick="weatherFn($('#city-input').val())">
+                Get Weather
+                </button>
+                  <!-- <div id="weather-info" class="animate__animated animate__fadeIn"> -->
+                      <h3 id="city-name"></h3>
+                      <p id="date"></p>
+                      <img id="weather-icon" src="" alt="Weather Icon">
+                      <p id="temperature"></p>
+                      <p id="description"></p>
+                      <p id="wind-speed"></p>
+                  <!-- </div> -->
+                  <p class="card-text"></p>
+              </div>
+              <div class="card-footer text-muted">
+              </div>
             </div>
-            </div>
-            <div class="location-not-found">
-                <h1>Sorry, Location not found!!!</h1>
-                <img src="images/err.png" alt="404 Error" width="150">
-            </div>
+          </div>
         </div>
-        <hr class="line2" id="aboutus">
-        <div class="about" >
-            <h1 ><u>ABOUT US</u></h1>
-            <p>
-                Welcome to BreezeNow🌧️, your reliable source for real-time 
-                weather updates and forecasts. Our platform provides accurate and 
-                detailed weather information, including temperature, humidity, wind speed, 
-                and precipitation. Whether you're planning your day or tracking severe weather, 
-                we've got you covered with a sleek, user-friendly interface and up-to-date data.
-                
-                Our mission is to keep you informed and prepared for any weather condition, 
-                with features like location-based forecasts, hourly updates, and long-range 
-                predictions. Explore the beauty of weather with our interactive visuals and 
-                intuitive design. Stay ahead of the weather with BreezeNow🌧️!</p>
-        </div>
-    </main>
+      </div>
 
-    <footer>
-        <div class="footer-links">
-            <a href="twitter" class="twitter" id="foot" target="_blank"><img src="images/twitter.jpg" width = "20"></a>
-            <a href="instagram" class="insta" target="_blank"><img src="images/insta.jpg" width = "20"></a>
-        <a href="gitub" class="git" target="_blank"><img src="images/git.png" width = "20"></a>
-        <a href="linkedin" class="linkin" target="_blank"><img src="images/R.png" width = "20"></a><br><br><br>
-        <a href="privacy policy" target="_blank" >Privacy Policy</a>
-        <a href="Terms and Conditions" class="tnc" target="_blank">Terms and Conditions</a>
-        <a href="Copyright Information" class="copyright" target="_blank">Copyright Information</a>
-        <a href="#backtotop">Back to Top</a>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-sm-12 d-flex align-items-center justify-content-center">
+            <div class="card mb-3" id="about-us">
+              <!-- <img class="card-img-bottom" src="images/weather.jpeg" alt="weather image cap"> -->
+              <div class="card-body">
+                <h3 class="card-title">ABOUT US!</h3>
+                <p class="card-text">Welcome to BreezeNow🌧️, your reliable source for real-time weather updates and forecasts. Our platform provides accurate and detailed weather information, including temperature, humidity, wind speed, and precipitation. Whether you're planning your day or tracking severe weather, we've got you covered with a sleek, user-friendly interface and up-to-date data. Our mission is to keep you informed and prepared for any weather condition, with features like location-based forecasts, hourly updates, and long-range predictions. Explore the beauty of weather with our interactive visuals and intuitive design. Stay ahead of the weather with BreezeNow🌧️</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-        <script src="script.js"></script>
-    </body>
+      </div>
+
+
+  <footer class="text-center text-white" style="background-color: black" id="footer">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Links -->
+      <section class="mt-5">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <!-- Grid column -->
+          <div class="col-md-3">
+            <h6 class="text-uppercase font-weight-bold" id="foot">
+              <a href="#header" class="text-white" >Back to Top</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white" target="_blank">Privacy Policy</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white" target="_blank">Terms & Conditions</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white" target="_blank">Copyright Information</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-5" />
+
+      <!-- Section: Social -->
+      <section class="text-center mb-5">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white ml-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/" class="text-white ml-4" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="google.com" class="text-white ml-4" target="_blank">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="instagram.com" class="text-white ml-4" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/" class="text-white ml-4" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="github.com" class="text-white ml-4" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </section>
+      <!-- Section: Social -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-white" href="kritya-anand.github.io/Weather-Web"
+         >BreezeNow.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+</div>
+<!-- End of .container -->
+
+    
+	<script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<script src=
+"https://momentjs.com/downloads/moment.min.js">
+	</script>
+	<script src="script2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
 </html>
