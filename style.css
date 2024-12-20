@@ -2,18 +2,31 @@
     margin: 0;
     padding: 0;
 }
+main{
+    flex:1;
+}
 
 html{
     scroll-behavior: smooth;
+    height: 100%;
 }
 
-.header{
-    width: 1350px;
-    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(images/bg1.webp);
-    background-position: center;
+body {
+    min-height: 100%; /* Make the body extend for content or viewport height */
+    margin: 0; /* Remove default margins */
+    background-image: url('images/bg1.webp'); /* Replace with your image URL */
     background-size: cover;
-    height: 260vh;
-}
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+  }
+
+@media (max-width: 768px) {
+    body {
+      background-size: contain; /* Adjust to fit smaller screens */
+    }
+  }
 
 /* Style the logo */
 .logo {
@@ -143,12 +156,18 @@ nav {
     margin-top:35px;
 }
 
-footer{
-    width: 100%;
-    padding: 30px;
+footer {
+    margin-top: auto; /* Push the footer to the bottom of the page */
     background: linear-gradient(to right, #8e44ad, #3498db);
-    transition: color 1s;
-}
+    text-align: center; /* Center-align footer content */
+    padding: 10px; /* Add some padding */
+    bottom: 0;
+    width: 100%;
+    position:relative;
+    top:1000px;
+    
+  }
+  
 
 .git{
     padding-right:25px;
