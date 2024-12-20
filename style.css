@@ -150,10 +150,12 @@ nav {
     text-align: center;
     line-height: 35px;
     font-size: 30px;
+    width:100%;
 }
 
 .about p{
     margin-top:35px;
+    width: 100%;
 }
 
 footer {
@@ -165,7 +167,7 @@ footer {
     width: 100%;
     position:relative;
     top:1000px;
-    
+    width:100%;
   }
   
 
