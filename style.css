@@ -94,11 +94,10 @@ html{
 
 #date {
     font-size: 14px;
-    color: rgb(255, 0, 0);
+    color: brown;
 }
 .card-body{
-    background: linear-gradient(135deg, #654ea3, #eaafc8);
-}
+    background: linear-gradient(to right, #FFDEE9, #B5FFFC);}
 
 body{
     background-image: url('images/bg1.webp');
