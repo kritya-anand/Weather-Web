@@ -103,6 +103,7 @@ html{
 #date {
     font-size: 14px;
     color: brown;
+    font-weight: bold;
 }
 .card-body{
     background: linear-gradient(to right, #FFDEE9, #B5FFFC);}
@@ -110,4 +111,13 @@ html{
 body{
     background-image: url('images/bg1.webp');
     background-repeat: none;
+}
+
+.weatherdetails{
+    color: black;
+}
+
+#city-input-btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
