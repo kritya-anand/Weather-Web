@@ -30,6 +30,8 @@ function weatherShowFn(data) {
     const localTime = new Date(utcTime.getTime() + timezoneOffset * 1000);
     const hours = localTime.getUTCHours();
 	const card = document.querySelector('.card-body');
+	const weatherdetails = document.querySelector('.weatherdetails');
+	const cardtitle = document.querySelector('.card-title');
 
 	const formattedTime = localTime.toUTCString('en-US', {
         hour: '2-digit',
@@ -73,15 +75,22 @@ function weatherShowFn(data) {
 
 	if (parseInt(hours) >= 5 && parseInt(hours) < 12) {
         card.style.background = 'linear-gradient(135deg, #ffcc70, #ff7e5f)';
+		weatherdetails.style.color = 'black';
+		cardtitle.style.color = 'black';
     } 
     else if (parseInt(hours) >= 12 && parseInt(hours) < 17) {
-        card.style.background = 'linear-gradient(120deg, #00c6ff, #0072ff)';
+        card.style.background = 'linear-gradient(to right, #ffd89b, #19547b)';
+		weatherdetails.style.color = 'black';
+		cardtitle.style.color = 'black';
     } 
     else if (parseInt(hours) >= 17 && parseInt(hours) < 20) {
-        card.style.background = 'linear-gradient(135deg, #ff9a9e, #fad0c4)'; // Evening: Orange
+        card.style.background = 'linear-gradient(135deg, #ff9a9e, #fad0c4)';
+		weatherdetails.style.color = 'black'; // Evening: Orange
+		cardtitle.style.color = 'black';
     } 
     else {
         card.style.background= 'linear-gradient(180deg, #2c3e50, #4ca1af)';
-
+		weatherdetails.style.color = 'whitesmoke';
+		cardtitle.style.color = 'whitesmoke';
     }
 }
